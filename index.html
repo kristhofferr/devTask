@@ -7,7 +7,37 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- devTask: app de lista de tarefas -->
+    <div class="container">
+      <header>
+        <h1>devTask</h1>
+        <p class="subtitle">Organize suas tarefas de desenvolvimento</p>
+      </header>
+
+      <form id="task-form">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="Nova tarefa..."
+          autocomplete="off"
+          maxlength="100"
+        />
+        <button type="submit">Adicionar</button>
+      </form>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="pending">Pendentes</button>
+        <button class="filter-btn" data-filter="done">Concluídas</button>
+      </div>
+
+      <ul id="task-list"></ul>
+
+      <footer class="stats">
+        <span id="stats-text"></span>
+        <button id="clear-done" class="clear-btn">Limpar concluídas</button>
+      </footer>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
